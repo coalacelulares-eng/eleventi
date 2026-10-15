@@ -1,27 +1,18 @@
 import { Link } from "@tanstack/react-router";
-import logo from "@/assets/eleventi-logo.png";
+import icon from "@/assets/siteclub-icone.png.asset.json";
 import { cn } from "@/lib/utils";
 
 export interface LogoProps {
   className?: string;
 }
 
-/**
- * Brand lockup: generated mark + wordmark.
- * Always links home so it doubles as the primary escape hatch in the header.
- */
+/** SiteClub lockup: uploaded icon + two-tone wordmark. */
 export function Logo({ className }: LogoProps) {
   return (
-    <Link to="/" className={cn("flex items-center gap-2.5", className)} aria-label="Eleventi — início">
-      <img
-        src={logo}
-        alt=""
-        width={32}
-        height={32}
-        className="h-8 w-8 object-contain"
-      />
-      <span className="font-display text-lg font-bold tracking-tight text-foreground">
-        eleventi
+    <Link to="/" className={cn("flex items-center gap-2.5", className)} aria-label="SiteClub — início">
+      <img src={icon.url} alt="" width={34} height={34} className="h-8.5 w-8.5 rounded-lg" />
+      <span className="font-display text-xl font-extrabold tracking-tight text-foreground">
+        site<span className="text-primary-glow">club</span>
       </span>
     </Link>
   );

@@ -1,59 +1,26 @@
 import { Link } from "@tanstack/react-router";
-import { Mail } from "lucide-react";
 import { Logo } from "./Logo";
 
 const YEAR = new Date().getFullYear();
 
-/** Minimal footer: brand, three links, one contact channel. */
 export function Footer() {
   return (
     <footer className="border-t border-border bg-surface">
-      <div className="mx-auto flex max-w-6xl flex-col gap-8 px-5 py-12 md:flex-row md:items-start md:justify-between">
-        <div className="max-w-sm">
+      <div className="mx-auto flex max-w-6xl flex-col gap-6 px-5 py-10 md:flex-row md:items-center md:justify-between">
+        <div>
           <Logo />
-          <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-            Consultoria de tecnologia da informação, infraestrutura e nuvem para
-            empresas que precisam de operação estável e previsível.
+          <p className="mt-3 text-xs uppercase tracking-[0.3em] text-muted-foreground">
+            Sites e sistemas por assinatura
           </p>
         </div>
-
-        <div className="flex flex-col gap-3 text-sm">
-          <span className="font-display text-xs uppercase tracking-widest text-muted-foreground">
-            Navegação
-          </span>
-          <Link to="/servicos" className="text-muted-foreground hover:text-foreground">
-            Serviços
-          </Link>
-          <Link to="/cloud" className="text-muted-foreground hover:text-foreground">
-            Cloud
-          </Link>
-          <Link to="/sobre" className="text-muted-foreground hover:text-foreground">
-            Quem somos
-          </Link>
-        </div>
-
-        <div className="flex flex-col gap-3 text-sm">
-          <span className="font-display text-xs uppercase tracking-widest text-muted-foreground">
-            Contato
-          </span>
-          <a
-            href="mailto:comercial@greenit-consulting.com.br"
-            className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground"
-          >
-            <Mail className="h-4 w-4" aria-hidden="true" />
-            comercial@greenit-consulting.com.br
-          </a>
-          <Link to="/contato" className="text-primary hover:text-primary-glow">
-            Solicitar orçamento
-          </Link>
+        <div className="flex gap-5 text-sm">
+          <Link to="/servicos" className="text-muted-foreground hover:text-foreground">Serviços</Link>
+          <Link to="/solicitar" className="text-primary-glow hover:text-foreground">Solicitar projeto</Link>
         </div>
       </div>
-
-      <div className="border-t border-border px-5 py-5">
-        <p className="mx-auto max-w-6xl text-xs text-muted-foreground">
-          © {YEAR} Eleventi. Todos os direitos reservados.
-        </p>
-      </div>
+      <p className="border-t border-border px-5 py-5 text-center text-xs text-muted-foreground">
+        © {YEAR} SiteClub. Todos os direitos reservados.
+      </p>
     </footer>
   );
 }
