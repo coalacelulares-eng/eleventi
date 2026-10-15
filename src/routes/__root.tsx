@@ -79,18 +79,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Eleventi — Consultoria em TI, Infraestrutura e Cloud" },
+      { title: "SiteClub — Sites e Sistemas por Assinatura" },
       {
         name: "description",
         content:
-          "Eleventi é uma consultoria de tecnologia da informação: infraestrutura, suporte técnico, microinformática e gestão de nuvem AWS, Azure e GCP.",
+          "Sites, landing pages e sistemas por assinatura. Envie seus dados e acompanhe a criação pelo WhatsApp.",
       },
-      { name: "author", content: "Eleventi" },
-      { property: "og:title", content: "Eleventi — Consultoria em TI, Infraestrutura e Cloud" },
+      { name: "author", content: "SiteClub" },
+      { property: "og:title", content: "SiteClub — Sites e Sistemas por Assinatura" },
       {
         property: "og:description",
         content:
-          "Consultoria de TI com foco em operação estável: infraestrutura, suporte, microinformática e nuvem.",
+          "Sites, landing pages e sistemas por assinatura.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -101,7 +101,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Manrope:wght@400;500;700&display=swap",
       },
       { rel: "icon", type: "image/png", href: "/favicon.png" },
     ],
