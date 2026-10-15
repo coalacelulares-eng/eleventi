@@ -14,7 +14,45 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      site_requests: {
+        Row: {
+          created_at: string
+          descricao: string
+          email: string
+          empresa: string | null
+          fotos_paths: string[]
+          id: string
+          logo_path: string | null
+          nome: string
+          tipo: string
+          whatsapp: string
+        }
+        Insert: {
+          created_at?: string
+          descricao: string
+          email: string
+          empresa?: string | null
+          fotos_paths?: string[]
+          id?: string
+          logo_path?: string | null
+          nome: string
+          tipo: string
+          whatsapp: string
+        }
+        Update: {
+          created_at?: string
+          descricao?: string
+          email?: string
+          empresa?: string | null
+          fotos_paths?: string[]
+          id?: string
+          logo_path?: string | null
+          nome?: string
+          tipo?: string
+          whatsapp?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
