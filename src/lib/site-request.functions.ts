@@ -71,7 +71,7 @@ export const submitSiteRequest = createServerFn({ method: "POST" })
 
     const logo_path = isImage(logo) ? await upload(logo, "logo") : null;
     const fotos_paths: string[] = [];
-    for (let i = 0; i < fotos.length; i++) fotos_paths.push(await upload(fotos[i], `foto-${i + 1}`));
+    for (const [i, foto] of fotos.entries()) fotos_paths.push(await upload(foto, `foto-${i + 1}`));
 
     const { data: row, error } = await supabaseAdmin
       .from("site_requests")
